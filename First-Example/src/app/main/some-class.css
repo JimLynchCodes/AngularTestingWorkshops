@@ -1,0 +1,10 @@
+.hey {
+  color:white;
+  background-color: #000011;
+}
+
+.inside {
+  color: orange;
+  background-color: pink;
+  min-height: 100px;
+}
