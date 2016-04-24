@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('angularTests')
+    .module('asyncUnitTest')
     .constant('malarkey', malarkey)
     .constant('moment', moment);
 

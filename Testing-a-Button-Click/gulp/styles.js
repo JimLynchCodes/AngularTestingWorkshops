@@ -21,16 +21,13 @@ gulp.task('styles', function() {
 });
 
 var buildStyles = function() {
-  var lessOptions = {
-    options: [
-      'bower_components',
-      path.join(conf.paths.src, '/app')
-    ]
+  var sassOptions = {
+    style: 'expanded'
   };
 
   var injectFiles = gulp.src([
-    path.join(conf.paths.src, '/app/**/*.less'),
-    path.join('!' + conf.paths.src, '/app/index.less')
+    path.join(conf.paths.src, '/app/**/*.scss'),
+    path.join('!' + conf.paths.src, '/app/index.scss')
   ], { read: false });
 
   var injectOptions = {
@@ -45,12 +42,12 @@ var buildStyles = function() {
 
 
   return gulp.src([
-    path.join(conf.paths.src, '/app/index.less')
+    path.join(conf.paths.src, '/app/index.scss')
   ])
     .pipe($.inject(injectFiles, injectOptions))
     .pipe(wiredep(_.extend({}, conf.wiredep)))
     .pipe($.sourcemaps.init())
-    .pipe($.less(lessOptions)).on('error', conf.errorHandler('Less'))
+    .pipe($.sass(sassOptions)).on('error', conf.errorHandler('Sass'))
     .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')));

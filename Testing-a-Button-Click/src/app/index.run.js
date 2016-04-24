@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('angularTests')
+    .module('asyncUnitTest')
     .run(runBlock);
 
   /** @ngInject */

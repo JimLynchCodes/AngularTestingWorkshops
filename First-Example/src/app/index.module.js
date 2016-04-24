@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('angularTests', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ui.router', 'ngMaterial', 'toastr']);
+    .module('asyncUnitTest', ['ngAnimate', 'ngSanitize', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr']);
 
 })();

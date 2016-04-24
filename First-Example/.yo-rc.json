@@ -9,20 +9,8 @@
           "module": "ngAnimate"
         },
         {
-          "key": "cookies",
-          "module": "ngCookies"
-        },
-        {
-          "key": "touch",
-          "module": "ngTouch"
-        },
-        {
           "key": "sanitize",
           "module": "ngSanitize"
-        },
-        {
-          "key": "messages",
-          "module": "ngMessages"
         },
         {
           "key": "aria",
@@ -30,23 +18,27 @@
         }
       ],
       "jQuery": {
-        "key": "jqLite"
+        "key": "jquery2"
       },
       "resource": {
-        "key": "$http",
-        "module": null
+        "key": "angular-resource",
+        "module": "ngResource"
       },
       "router": {
         "key": "ui-router",
         "module": "ui.router"
       },
       "ui": {
-        "key": "angular-material",
-        "module": "ngMaterial"
+        "key": "bootstrap",
+        "module": null
+      },
+      "bootstrapComponents": {
+        "key": "ui-bootstrap",
+        "module": "ui.bootstrap"
       },
       "cssPreprocessor": {
-        "key": "less",
-        "extension": "less"
+        "key": "node-sass",
+        "extension": "scss"
       },
       "jsPreprocessor": {
         "key": "noJsPrepro",
@@ -56,12 +48,6 @@
       "htmlPreprocessor": {
         "key": "noHtmlPrepro",
         "extension": "html"
-      },
-      "bootstrapComponents": {
-        "name": null,
-        "version": null,
-        "key": null,
-        "module": null
       },
       "foundationComponents": {
         "name": null,

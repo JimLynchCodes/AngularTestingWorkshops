@@ -18,12 +18,10 @@ function listFiles() {
 
   var patterns = wiredep(wiredepOptions).js
     .concat([
-      path.join(conf.paths.src, '/app/index.module.js'),
-      path.join(conf.paths.src, '/app/components/webDevTec/webDevTec.service.js'),
-
-      path.join(conf.paths.src, '/app/main/main.controller.js'),
-      path.join(conf.paths.src, '/app/main/main.controller.spec.js'),
-      path.join(conf.paths.src, '/**/*.mock.js')
+      path.join(conf.paths.src, '/app/**/*.module.js'),
+      path.join(conf.paths.src, '/app/**/*.js'),
+      path.join(conf.paths.src, '/**/*.spec.js'),
+      path.join(conf.paths.src, '/**/*.mock.js'),
     ])
     .concat(pathSrcHtml);
 
@@ -46,13 +44,13 @@ module.exports = function(config) {
   var configuration = {
     files: listFiles(),
 
-    singleRun: true,
+    singleRun: false,
 
     autoWatch: false,
 
     ngHtml2JsPreprocessor: {
       stripPrefix: conf.paths.src + '/',
-      moduleName: 'angularTests'
+      moduleName: 'asyncUnitTest'
     },
 
     logLevel: 'WARN',
