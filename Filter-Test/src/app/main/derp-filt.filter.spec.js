@@ -2,7 +2,7 @@ describe('reverse filter', function() {
 
      var reverseFilter;
 
-     beforeEach(module('asyncUnitTest'))
+     beforeEach(module('testingButtonClick'))
      beforeEach(inject(function(_$filter_) {
           reverseFilter = _$filter_('reverse');
 

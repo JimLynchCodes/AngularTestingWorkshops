@@ -2,7 +2,7 @@
  * Created by jameslynch on 4/20/16.
  */
 ;(function () {
-     angular.module('asyncUnitTest')
+     angular.module('testingButtonClick')
           .filter('reverse', function() {
                return function(input) {
                     var out = "";

@@ -11,7 +11,7 @@
           var $controller;
           var calcController;
 
-          beforeEach(module('asyncUnitTest'))
+          beforeEach(module('testingButtonClick'))
           beforeEach(inject(function(_$controller_) {
 
                $controller = _$controller_;
