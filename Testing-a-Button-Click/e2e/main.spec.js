@@ -1,21 +1,49 @@
-'use strict';
+(function () {
+     'use strict';
+     var page;
+     describe('Button Click Example', function () {
 
-describe('The example view', function () {
-  var page;
+          beforeEach(function () {
+               browser.get('http://localhost:3000/');
+               page = require('./main.po');
+          })
 
-  //beforeEach(function () {
-  //  browser.get('/index.html');
-  //  page = require('./example.po');
-  //});
-  //
-  //it('should include jumbotron with correct data', function() {
-  //  expect(page.h1El.getText()).toBe('\'Allo, \'Allo!');
-  //  expect(page.imgEl.getAttribute('src')).toMatch(/assets\/images\/yeoman.png$/);
-  //  expect(page.imgEl.getAttribute('alt')).toBe('I\'m Yeoman');
-  //});
-  //
-  //it('should list more than 5 awesome things', function () {
-  //  expect(page.thumbnailEls.count()).toBeGreaterThan(5);
-  //});
+          it('should find the \"calculator-title\" element', function () {
+               expect(page.pageTitle.isPresent()).toBeTruthy();
+          });
 
-});
+          it('should not find elements that don\'t exist', function () {
+               browser.get('http://localhost:3000/');
+
+               expect(page.nonexistentElement.isPresent()).toBeFalsy();
+
+          });
+
+          it('should not have clicked text visible to start', function () {
+               expect(page.clickedText.isPresent()).toBeTruthy();
+               expect(page.clickedText.isDisplayed()).toBeFalsy();
+
+          });
+
+          it('should show the text after the button is clicked', function () {
+               page.myButton.click();
+               expect(page.clickedText.isDisplayed()).toBeTruthy();
+          });
+
+          it('should show correct text after button is pressed once.', function () {
+               page.myButton.click();
+               expect(page.clickedText.getText()).toEqual('The button has been clicked 1 time.');
+          });
+
+          it('should show the correct text after button is clicked 5 times.', function () {
+               page.myButton.click();
+               page.myButton.click();
+               page.myButton.click();
+               page.myButton.click();
+               page.myButton.click();
+               expect(page.clickedText.getText()).toEqual('The button has been clicked 5 times.');
+          })
+
+     })
+
+})();
