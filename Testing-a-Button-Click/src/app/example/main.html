@@ -1,0 +1,11 @@
+
+<div>
+  <div class="page-title">This is the Button Click Example.</div>
+
+  <div id="clicked-text" ng-show="vm.buttonClicked">The button has been clicked
+    <span ng-bind="vm.totalButtonClicks"></span>
+    time<span ng-show="vm.totalButtonClicks != 1">s</span>.
+  </div>
+
+  <button class="my-button" ng-click="vm.onButtonClicked()">Click me</button>
+</div>
