@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('asyncUnitTest')
+    .module('testingButtonClick')
     .config(config);
 
   /** @ngInject */

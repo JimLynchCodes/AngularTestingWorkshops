@@ -5,7 +5,7 @@
      'use strict';
 
      angular
-          .module('asyncUnitTest')
+          .module('testingButtonClick')
           .controller('CalculatorController', CalculatorController);
 
      /** @ngInject */

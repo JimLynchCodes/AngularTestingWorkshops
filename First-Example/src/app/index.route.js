@@ -2,7 +2,7 @@
      'use strict';
 
      angular
-          .module('asyncUnitTest')
+          .module('testingButtonClick')
           .config(routerConfig);
 
      /** @ngInject */
@@ -10,7 +10,7 @@
           $stateProvider
                .state('home', {
                     url: '/',
-                    templateUrl: 'app/main/main.html',
+                    templateUrl: 'app/example/example.html',
                     controller: 'MainController',
                     controllerAs: 'main'
                })

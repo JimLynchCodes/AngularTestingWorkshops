@@ -1,0 +1,53 @@
+
+$buttonWidth: 20%;
+$buttonHeight: 9%;
+
+$clickedTextWidth: 100%;
+$clickedTextSize: 20pt;
+
+
+@mixin common-font-style() {
+ font-family: "Roboto Mono", Menlo, monospace;
+
+}
+
+@mixin totally-centered-text($height, $width, $x-offset-percentage, $y-offset-percentage){
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  align-content: center;
+  top: (50% - $height/2 - $y-offset-percentage);
+}
+
+
+@mixin totally-centered-button($height, $width, $x-offset-percentage, $y-offset-percentage) {
+  @include totally-centered-text($height, $width, $x-offset-percentage, $y-offset-percentage);
+  left: (50% - $width/2 - $x-offset-percentage);
+}
+
+.page-title {
+  @include common-font-style;
+
+  font-size: 20pt;
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+#clicked-text {
+  @include totally-centered-text(0%, 0%, 0%, 13%);
+  @include common-font-style;
+
+  font-size: $clickedTextSize;
+  width: $clickedTextWidth;
+  font-size: 15pt;
+
+}
+
+.my-button {
+  @include common-font-style;
+  @include totally-centered-button($buttonHeight, $buttonWidth, 0%, 0%);
+  font-size: 15pt;
+  width: $buttonWidth;
+  height: 70px;
+
+}

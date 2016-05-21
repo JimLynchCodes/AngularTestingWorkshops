@@ -6,7 +6,7 @@
      'use strict';
 
      angular
-          .module('asyncUnitTest')
+          .module('testingButtonClick')
           .service('DerpyDerp', MainController);
 
      /** @ngInject */
