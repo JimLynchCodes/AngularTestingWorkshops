@@ -2,13 +2,13 @@
   'use strict';
 
   angular
-    .module('httpTest')
+    .module('httpTdd')
     .run(runBlock);
 
   /** @ngInject */
   function runBlock($log) {
 
-    $log.debug('runBlock end');
+    
   }
 
 })();

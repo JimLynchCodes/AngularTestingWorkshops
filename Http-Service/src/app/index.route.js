@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('httpTest')
+    .module('httpTdd')
     .config(routerConfig);
 
   /** @ngInject */
@@ -12,7 +12,7 @@
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'vm'
       });
 
     $urlRouterProvider.otherwise('/');
