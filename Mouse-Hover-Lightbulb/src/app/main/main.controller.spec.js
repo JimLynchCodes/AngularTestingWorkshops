@@ -38,18 +38,18 @@
 
     it('should change imgSrc when hovered over', function () {
       vm.buttonHovered();
-      expect(vm.imgSrc).toEqual('assets/real-images/lightbulb-on.jpg')
+      expect(vm.imgSrc).toEqual('assets/sample-images/lightbulb-on.jpg')
     });
 
     it('should change imgSrc when hovered out of', function () {
       vm.buttonHovered();
       vm.buttonMouseOut();
-      expect(vm.imgSrc).toEqual('assets/real-images/lightbulb-off.jpg')
+      expect(vm.imgSrc).toEqual('assets/sample-images/lightbulb-off.jpg')
 
     });
 
     it('should start with imgSrc off', function () {
-      expect(vm.imgSrc).toEqual('assets/real-images/lightbulb-off.jpg')
+      expect(vm.imgSrc).toEqual('assets/sample-images/lightbulb-off.jpg')
 
     })
 
