@@ -15,18 +15,16 @@
       expect(controller).toBeDefined();
     });
 
-    it('should not have vm.result defined ', function () {
+    it('should not have vm.result defined before fizzbuzz is called', function () {
       expect(controller.result).not.toBeDefined();
     });
 
-    it('should have vm.result defined after calling callFizzBuzz', function () {
+    it('should have vm.result defined after calling callFizzBuzz with a number' +
+      '(using magic number 1 here)', function () {
+      controller.inputText = 1;
       controller.callFizzBuzz();
       expect(controller.result).toBeDefined();
     });
-
-    it('should do stuff', function () {
-
-    })
 
 
   });

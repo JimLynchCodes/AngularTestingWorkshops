@@ -11,15 +11,14 @@
 
     $log.log('calling fizzbuzz');
 
-    $timeout(function() {
-      vm.callFizzBuzz();
-    });
+     vm.callFizzBuzz = function() {
 
-    vm.callFizzBuzz = function() {
-      vm.result = FizzbuzzService.fizzbuzz();
+       $log.log('input text: ' + vm.inputText);
+       vm.result = FizzbuzzService.fizzbuzz(vm.inputText);
+       $log.log('result is: ' + vm.result);
+     };
 
-    }
+    // vm.callFizzBuzz();
 
-    $log.log('result is: ' + vm.result);
   }
 })();

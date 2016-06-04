@@ -17,7 +17,7 @@ beforeEachProviders(() => [Angular2ButtonClickAppComponent]);
 beforeEach(inject([Angular2ButtonClickAppComponent], (_app: Angular2ButtonClickAppComponent) => {
 
   app = _app;
-}))
+}));
 
 
 
