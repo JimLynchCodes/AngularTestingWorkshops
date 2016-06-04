@@ -37,21 +37,21 @@ describe('The main view', function () {
 
   it('should have the false img when page loads', function () {
 
-    // expect(page.lightbulb.getAttribute('src')).toEqual('assets/real-images/lightbulb-off.jpg');
-    expect(page.lightbulb.getAttribute('src')).toContain('assets/real-images/lightbulb-off.jpg');
+    // expect(page.lightbulb.getAttribute('src')).toEqual('assets/sample-images/lightbulb-off.jpg');
+    expect(page.lightbulb.getAttribute('src')).toContain('assets/sample-images/lightbulb-off.jpg');
   });
 
   it('should show lit img when you mouse over ', function () {
 
     browser.actions().mouseMove(page.button).perform();
-    expect(page.lightbulb.getAttribute('src')).toContain('assets/real-images/lightbulb-on.jpg');
+    expect(page.lightbulb.getAttribute('src')).toContain('assets/sample-images/lightbulb-on.jpg');
   });
 
   it('should show false img when you mouse out', function () {
 
     browser.actions().mouseMove(page.button).perform();
     browser.actions().mouseMove(page.outputText).perform();
-    expect(page.lightbulb.getAttribute('src')).toContain('assets/real-images/lightbulb-off.jpg');
+    expect(page.lightbulb.getAttribute('src')).toContain('assets/sample-images/lightbulb-off.jpg');
   });
 
 
