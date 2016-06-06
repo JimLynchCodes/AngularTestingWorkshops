@@ -90,8 +90,17 @@ gulp.task('other', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });
 
+gulp.task('custom-copy', function () {
+  return gulp.src([
+    path.join(conf.paths.src, 'customzz/**/*.*'),
+    // path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss}')
+  ])
+  // .pipe(fileFilter)
+    .pipe(gulp.dest(path.join(conf.paths.dist, '/customzz/')));
+});
+
 gulp.task('clean', function () {
   return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
 });
 
-gulp.task('build', ['html', 'fonts', 'other']);
+gulp.task('build', ['custom-copy', 'html', 'fonts', 'other']);
