@@ -1,0 +1,25 @@
+<div class="container">
+
+  <br>
+  <nav><h1>TDD Angular Lightbulb Hover Solution</h1></nav>
+
+  <br>
+  <br>
+  <div class="output-text">
+
+  <!--lit is: {{main.litUp}}-->
+  </div>
+
+  <div >
+    <img id='lightbulb' src="{{main.imgSrc}}"/>
+  </div>
+
+  <button type="button"
+          class="btn btn-primary my-button"
+          ng-mouseover="main.buttonHovered()"
+          ng-mouseleave="main.buttonMouseOut()">
+    Mouse Over Me!
+  </button>
+
+
+</div>
