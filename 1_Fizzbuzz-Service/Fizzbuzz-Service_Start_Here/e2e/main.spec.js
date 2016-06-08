@@ -18,11 +18,11 @@ describe('The main view', function () {
     expect(page.resultText.getText()).toEqual('')
   });
 
+  it('should...', function () {
 
 
-
-
-
+    
+  })
 
 
 });
