@@ -57,6 +57,6 @@ AngularTestingWorkshops/1_Fizzbuzz-Service/Fizzbuzz-Service_Solution/
 
 You can also email jim@ng-nj.com with questions or concerns.
 
-Good luck and have fun! :)
+Good luck and have fun! :) 
 
  
